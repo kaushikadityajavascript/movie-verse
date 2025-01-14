@@ -45,12 +45,9 @@ const MovieDetails = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay for Dark Effect */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-start p-8 gap-8">
-        {/* Movie Poster */}
         <div className="w-72 flex-shrink-0">
           <img
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -59,9 +56,7 @@ const MovieDetails = () => {
           />
         </div>
 
-        {/* Movie Details */}
         <div className="flex-1">
-          {/* Title */}
           <h1 className="text-4xl font-bold">
             {movie.title}{" "}
             <span className="text-gray-400">
@@ -69,21 +64,18 @@ const MovieDetails = () => {
             </span>
           </h1>
 
-          {/* Sub-details */}
           <div className="flex items-center gap-4 mt-2 text-gray-300">
             <span>{movie.release_date}</span>
             <span>{movie.runtime} mins</span>
             <span>{movie.genres.map((g) => g.name).join(", ")}</span>
           </div>
 
-          {/* User Score */}
           <div className="flex items-center gap-4 mt-4">
             <div className="w-16">
-              <CircularProgressBar value={movie.vote_average * 10} />
+              <CircularProgressBar value={movie.vote_average} />
             </div>
             <span className="text-xl">User Score</span>
                   </div>
-                  {/* Tagline */}
         <button
             className="mt-4 px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600"
             onClick={() => window.open(`https://www.imdb.com/title/${movie.imdb_id}`, "_blank", "noopener,noreferrer")}
@@ -91,11 +83,9 @@ const MovieDetails = () => {
             View on IMDb
         </button>
 
-          {/* Overview */}
           <h2 className="text-2xl font-semibold mt-6">Overview</h2>
           <p className="text-gray-200 mt-2">{movie.overview}</p>
 
-          {/* Additional Info */}
           <div className="mt-6">
             <p>
               <span className="font-semibold">Director: </span>

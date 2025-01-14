@@ -14,7 +14,6 @@ const Section:React.FC<SectionProps> = ({ title, movies }) => {
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      {/* Horizontal Scroll Container */}
       <div className="flex overflow-x-auto space-x-4 scrollbar-hide" >
         {movies.map((movie) => (
           <MovieCard

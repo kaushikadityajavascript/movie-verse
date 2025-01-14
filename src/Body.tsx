@@ -83,7 +83,6 @@ const Body = () => {
   return (
     <div className="p-6">
       <div className="relative mb-6">
-        {/* Stylish Search Bar */}
         <div className="flex items-center bg-white shadow-lg rounded-full w-full max-w-3xl mx-auto px-4 py-2">
           <input
             type="text"
@@ -104,7 +103,6 @@ const Body = () => {
           </button>
         </div>
       </div>
-      {/* Render Sections */}
       {filteredMovies.length > 0 ? (
         <Section title="Search Results" movies={filteredMovies} />
       ) : (

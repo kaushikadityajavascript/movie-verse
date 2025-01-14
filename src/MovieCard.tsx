@@ -17,13 +17,11 @@ const MovieCard: React.FC<MovieCardProps> = ({ id, title, image, rating, release
      <Link to={`/movie/${id}`}>
     <div className="flex flex-col items-center">
     <div className="w-44 flex-shrink-0 bg-gray-800 text-white rounded-lg shadow-md overflow-hidden relative">
-      {/* Image */}
       <img
         src={image}
         alt={title}
         className="w-full h-64 object-cover"
         />
-         {/* Circular Progress Bar  */}
       <div className="absolute top-5 left-2 w-10 h-16 text-white-bold">
           <CircularProgressbar
             value={rating} 
